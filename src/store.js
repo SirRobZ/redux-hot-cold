@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware} from 'redux';
 
-import {gameReducer} from './reducer';
+import reducer from './reducer';
 
-export default createStore(gameReducer);
+export default createStore(reducer, applyMiddleware(thunk));

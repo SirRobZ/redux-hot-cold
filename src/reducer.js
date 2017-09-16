@@ -2,12 +2,12 @@ import { NEW_GAME, GUESS, TOGGLE_INFOMODAL } from './actions';
 
 const initialState = {
   guesses: [],
-  feedback: 'Make your guess',
+  feedback: 'Make your guess!',
   correctAnswer: Math.floor(Math.random() * 100) + 1,
   showInfoModal: false
 };
 
-export const gameReducer = (state = initialState || state, action) => {
+export default (state = initialState || state, action) => {
   if (action.type === NEW_GAME) {
     state = Object.assign({}, initialState, {
       correctAnswer: action.correctAnswer
